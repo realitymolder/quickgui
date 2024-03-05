@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
@@ -57,7 +58,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Don't forget to also change the size in linux/my_application.cc:50
   setWindowMinSize(const Size(692, 580));
-  setWindowMaxSize(const Size(692, 580));
+  setWindowMaxSize(const Size(1180, 1000));
   final foundQuickGet = await Process.run('which', ['quickget']);
   if (foundQuickGet.exitCode == 0) {
     gOperatingSystems = await loadOperatingSystems(false);
